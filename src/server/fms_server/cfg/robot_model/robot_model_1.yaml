@@ -1,0 +1,12 @@
+model_id: 1
+model_name: robot_model_1
+type: 2
+max_v: 0.5
+max_w: 0.3
+battery_life: 3600
+weight: 50
+max_weight: 100
+size_w: 1.5
+size_h: 2.0
+size_d: 1.0
+task_time: 60.0

@@ -1,0 +1,1074 @@
+define hokuyolaser ranger
+(
+  sensor(
+    # laser-specific properties
+    # factory settings for LMS200
+    range [ 0.0  5.0 ]
+    fov 270.0
+    samples 270
+  )
+  model
+  (
+    # generic model properties
+    size [ 0.07 0.07 0.05 ] # dimensions from LMS200 data sheet
+    color "blue"
+    obstacle_return 0
+  )
+)
+
+define floorplan model
+(
+  # sombre, sensible, artistic
+  color "gray30"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+
+  obstacle_return 1
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+define background model
+(
+  # sombre, sensible, artistic
+  color "red"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+
+  obstacle_return 0
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+# set the resolution of the underlying raytrace model in meters
+resolution 0.02
+
+interval_sim 100  # simulation timestep in milliseconds
+
+window
+(
+  size [ 635.000 666.000 ] # in pixels
+  scale 36.995   # pixels per meter
+  center [ 0  0 ]
+  rotate [ 0  0 ]
+
+  show_data 1              # 1=on 0=off
+)
+
+# load an environment bitmap
+
+floorplan
+( 
+  name "scenario1"
+  size [150.0 84.0 0]
+  pose [ 75.0 42.0 0 0 ]
+)
+
+define pioneer_base position 
+(
+  color "red"                 # Default color.
+  drive "diff"                # Differential steering model.
+  gui_nose 0                    # Draw a nose on the robot so we can see which way it points
+  obstacle_return 0             # Can hit things.
+  ranger_return 0.5              # reflects sonar beams
+  blob_return 1                 # Seen by blobfinders
+  fiducial_return 1             # Seen as "1" fiducial finders
+
+  localization "gps"
+  localization_origin [0 0 0 0]   # Start odometry at (0, 0, 0).
+
+  # alternative odometric localization with simple error model
+  # localization "odom"           # Change to "gps" to have impossibly perfect, global odometry
+  # odom_error [ 0.05 0.05 0.1 ]    # Odometry error or slip in X, Y and Theta
+                                    # (Uniform random distribution)
+
+  # four DOF kinematics limits
+  # [ xmin xmax ymin ymax zmin zmax amin amax ]
+  velocity_bounds [-1 1 0 0 0 0 -45.0 45.0 ]
+  acceleration_bounds [-1.0 1.0 0 0 0 0 -45 45.0 ]
+)
+
+define pioneer2dx_base_no_sonar pioneer_base
+(
+  # actual size
+  size [0.44 0.38 0.22] # sizes from MobileRobots' web site
+
+  # the pioneer's center of rotation is offset from its center of area
+  origin [-0.04 0 0 0]
+
+  # draw a nose on the robot so we can see which way it points
+  gui_nose 0
+
+  # estimated mass in KG
+  mass 23.0 
+)
+
+# as above, but with front sonar only
+define pioneer2dx_no_sonar pioneer2dx_base_no_sonar
+(
+  # simplified Body shape:
+  block(
+    points 8
+    point[0] [-0.2 0.12]
+    point[1] [-0.2 -0.12]
+    point[2] [-0.12 -0.2555]
+    point[3] [0.12 -0.2555]
+    point[4] [0.2 -0.12]
+    point[5] [0.2 0.12]
+    point[6] [0.12 0.2555]
+    point[7] [-0.12 0.2555]
+    z [0 0.22]
+  )
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_0"
+pose [ 30 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_1"
+pose [ 34 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_2"
+pose [ 38 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_3"
+pose [ 42 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_4"
+pose [ 46 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_5"
+pose [ 50 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_6"
+pose [ 54 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_7"
+pose [ 58 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_8"
+pose [ 62 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_9"
+pose [ 66 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_10"
+pose [ 70 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_11"
+pose [ 74 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_12"
+pose [ 78 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_13"
+pose [ 82 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_14"
+pose [ 86 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_15"
+pose [ 90 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_16"
+pose [ 94 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_17"
+pose [ 98 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_18"
+pose [ 102 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_19"
+pose [ 106 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_20"
+pose [ 110 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_21"
+pose [ 114 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_22"
+pose [ 118 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_23"
+pose [ 122 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_24"
+pose [ 126 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_25"
+pose [ 130 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_26"
+pose [ 134 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_27"
+pose [ 138 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_28"
+pose [ 142 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_29"
+pose [ 146 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_30"
+pose [ 150 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_31"
+pose [ 154 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_32"
+pose [ 158 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_33"
+pose [ 162 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_34"
+pose [ 166 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_35"
+pose [ 170 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_36"
+pose [ 174 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_37"
+pose [ 178 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_38"
+pose [ 182 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_39"
+pose [ 186 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_40"
+pose [ 190 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_41"
+pose [ 194 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_42"
+pose [ 198 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_43"
+pose [ 202 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_44"
+pose [ 206 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_45"
+pose [ 210 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_46"
+pose [ 214 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_47"
+pose [ 218 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_48"
+pose [ 222 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_49"
+pose [ 226 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_50"
+pose [ 230 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_51"
+pose [ 234 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_52"
+pose [ 238 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_53"
+pose [ 242 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_54"
+pose [ 246 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_55"
+pose [ 250 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_56"
+pose [ 254 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_57"
+pose [ 258 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_58"
+pose [ 262 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_59"
+pose [ 266 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_60"
+pose [ 270 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_61"
+pose [ 274 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_62"
+pose [ 278 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_63"
+pose [ 282 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_64"
+pose [ 286 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_65"
+pose [ 290 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_66"
+pose [ 294 4 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_67"
+pose [ 30 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_68"
+pose [ 34 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_69"
+pose [ 38 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_70"
+pose [ 42 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_71"
+pose [ 46 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_72"
+pose [ 50 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_73"
+pose [ 54 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_74"
+pose [ 58 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_75"
+pose [ 62 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_76"
+pose [ 66 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_77"
+pose [ 70 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_78"
+pose [ 74 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_79"
+pose [ 78 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_80"
+pose [ 82 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_81"
+pose [ 86 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_82"
+pose [ 90 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_83"
+pose [ 94 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_84"
+pose [ 98 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_85"
+pose [ 102 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_86"
+pose [ 106 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_87"
+pose [ 110 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_88"
+pose [ 114 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_89"
+pose [ 118 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_90"
+pose [ 122 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_91"
+pose [ 126 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_92"
+pose [ 130 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_93"
+pose [ 134 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_94"
+pose [ 138 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_95"
+pose [ 142 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_96"
+pose [ 146 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_97"
+pose [ 150 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_98"
+pose [ 154 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_99"
+pose [ 158 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_100"
+pose [ 162 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_101"
+pose [ 166 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_102"
+pose [ 170 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_103"
+pose [ 174 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_104"
+pose [ 178 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_105"
+pose [ 182 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_106"
+pose [ 186 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_107"
+pose [ 190 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_108"
+pose [ 194 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_109"
+pose [ 198 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_110"
+pose [ 202 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_111"
+pose [ 206 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_112"
+pose [ 210 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_113"
+pose [ 214 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_114"
+pose [ 218 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_115"
+pose [ 222 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_116"
+pose [ 226 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_117"
+pose [ 230 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_118"
+pose [ 234 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_119"
+pose [ 238 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_120"
+pose [ 242 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_121"
+pose [ 246 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_122"
+pose [ 250 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_123"
+pose [ 254 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_124"
+pose [ 258 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_125"
+pose [ 262 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_126"
+pose [ 266 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_127"
+pose [ 270 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_128"
+pose [ 274 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_129"
+pose [ 278 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_130"
+pose [ 282 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_131"
+pose [ 286 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_132"
+pose [ 290 136 0 0 ]
+)
+
+pioneer2dx_no_sonar
+(
+# can refer to the robot by this name
+name "robot_133"
+pose [ 294 136 0 0 ]
+)
+
+

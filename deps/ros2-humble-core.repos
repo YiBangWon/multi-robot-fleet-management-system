@@ -1,0 +1,17 @@
+repositories:
+  DynamixelSDK:
+    type: git
+    url: https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+    version: bd0c2e810ae4761ef9175e770b99493202982225
+  turtlebot3_msgs:
+    type: git
+    url: https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+    version: cdee60f7618b9ed2f85f65259c0f96e3f02b1c55
+  turtlebot3:
+    type: git
+    url: https://github.com/ROBOTIS-GIT/turtlebot3.git
+    version: e478e9a95040305f89e6c5b803c8b8d47f89410f
+  turtlebot3_simulations:
+    type: git
+    url: https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+    version: a35a56c8b04877dc89772b598084d8ce648a9023

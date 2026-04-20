@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fms_server</name>
+  <version>0.0.0</version>
+  <author>Soohwan Song</author>
+  <description>Server-side launch package and configuration bundle for the fleet orchestration stack.</description>
+
+  <maintainer email="songsh@dongguk.edu">Soohwan Song</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>nav2_map_server</build_depend>
+
+  <exec_depend>nav2_map_server</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+
+</package>

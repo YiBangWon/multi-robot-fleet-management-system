@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source /opt/ros/noetic/setup.bash
+source /home/song/projects/fms_ws/fms_large_ws/devel/setup.bash
+roslaunch fms_demo run_fms.launch
+
+exit 

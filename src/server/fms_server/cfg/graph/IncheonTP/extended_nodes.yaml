@@ -1,0 +1,1139 @@
+loc_x: 29
+loc_y: 22.85
+name: Rack1
+---
+loc_x: 29
+loc_y: 21.55
+name: Rack2
+---
+loc_x: 29
+loc_y: 20.25
+name: Rack3
+---
+loc_x: 29
+loc_y: 18.95
+name: Rack4
+---
+loc_x: 29
+loc_y: 17.65
+name: Rack5
+---
+loc_x: 29
+loc_y: 16.35
+name: Rack6
+---
+loc_x: 29
+loc_y: 15.05
+name: Rack7
+---
+loc_x: 29
+loc_y: 13.75
+name: Rack8
+---
+loc_x: 29
+loc_y: 12.45
+name: Rack9
+---
+loc_x: 29
+loc_y: 11.15
+name: ""
+---
+loc_x: 29
+loc_y: 9.85
+name: ""
+---
+loc_x: 32.9
+loc_y: 13.75
+name: Rack10
+---
+loc_x: 32.9
+loc_y: 15.05
+name: Rack11
+---
+loc_x: 32.9
+loc_y: 12.45
+name: Rack100
+---
+loc_x: 32.9
+loc_y: 16.35
+name: Rack101
+---
+loc_x: 32.9
+loc_y: 17.65
+name: Rack12
+---
+loc_x: 32.9
+loc_y: 18.95
+name: Rack102
+---
+loc_x: 32.9
+loc_y: 20.25
+name: Rack13
+---
+loc_x: 32.9
+loc_y: 21.55
+name: Rack14
+---
+loc_x: 32.9
+loc_y: 22.85
+name: Rack15
+---
+loc_x: 36.8
+loc_y: 22.85
+name: Rack16
+---
+loc_x: 36.8
+loc_y: 21.55
+name: Rack17
+---
+loc_x: 36.8
+loc_y: 20.25
+name: Rack18
+---
+loc_x: 36.8
+loc_y: 18.95
+name: Rack19
+---
+loc_x: 36.8
+loc_y: 17.65
+name: Rack20
+---
+loc_x: 36.8
+loc_y: 16.35
+name: Rack21
+---
+loc_x: 36.8
+loc_y: 15.05
+name: Rack22
+---
+loc_x: 36.8
+loc_y: 13.75
+name: Rack23
+---
+loc_x: 36.8
+loc_y: 12.45
+name: Rack24
+---
+loc_x: 36.8
+loc_y: 11.15
+name: ""
+---
+loc_x: 36.8
+loc_y: 9.85
+name: ""
+---
+loc_x: 30.3
+loc_y: 9.85
+name: ""
+---
+loc_x: 29
+loc_y: 8.550000000000001
+name: ""
+---
+loc_x: 27.1
+loc_y: 9.85
+name: ""
+---
+loc_x: 31.6
+loc_y: 9.85
+name: ""
+---
+loc_x: 30.3
+loc_y: 8.550000000000001
+name: ""
+---
+loc_x: 32.9
+loc_y: 9.85
+name: ""
+---
+loc_x: 31.6
+loc_y: 8.550000000000001
+name: ""
+---
+loc_x: 34.2
+loc_y: 9.85
+name: ""
+---
+loc_x: 32.9
+loc_y: 8.550000000000001
+name: ""
+---
+loc_x: 32.9
+loc_y: 11.15
+name: ""
+---
+loc_x: 35.5
+loc_y: 9.85
+name: ""
+---
+loc_x: 34.2
+loc_y: 8.550000000000001
+name: ""
+---
+loc_x: 35.5
+loc_y: 8.550000000000001
+name: ""
+---
+loc_x: 38.62
+loc_y: 9.85
+name: ""
+---
+loc_x: 40.44
+loc_y: 9.85
+name: ChargingStation1
+---
+loc_x: 36.8
+loc_y: 8.550000000000001
+name: ""
+---
+loc_x: 35.5
+loc_y: 7.25
+name: ""
+---
+loc_x: 34.2
+loc_y: 7.25
+name: ""
+---
+loc_x: 32.9
+loc_y: 7.25
+name: ""
+---
+loc_x: 31.6
+loc_y: 7.25
+name: ""
+---
+loc_x: 30.3
+loc_y: 7.25
+name: ""
+---
+loc_x: 29
+loc_y: 7.25
+name: ""
+---
+loc_x: 29
+loc_y: 5.95
+name: Rack25
+---
+loc_x: 30.3
+loc_y: 5.95
+name: Rack26
+---
+loc_x: 27.1
+loc_y: 5.95
+name: ""
+---
+loc_x: 31.6
+loc_y: 5.95
+name: Rack27
+---
+loc_x: 32.9
+loc_y: 5.95
+name: Rack28
+---
+loc_x: 34.2
+loc_y: 5.95
+name: Rack29
+---
+loc_x: 35.5
+loc_y: 5.95
+name: Rack30
+---
+loc_x: 36.8
+loc_y: 5.95
+name: Rack31
+---
+loc_x: 36.8
+loc_y: 7.25
+name: ""
+---
+loc_x: 38.62
+loc_y: 5.95
+name: ""
+---
+loc_x: 40.44
+loc_y: 5.95
+name: ChargingStation4
+---
+loc_x: 38.62
+loc_y: 7.25
+name: ""
+---
+loc_x: 40.44
+loc_y: 7.25
+name: ChargingStation3
+---
+loc_x: 27.1
+loc_y: 7.9
+name: ""
+---
+loc_x: 26.1
+loc_y: 9.85
+name: ""
+---
+loc_x: 27.1
+loc_y: 11.375
+name: ""
+---
+loc_x: 27.1
+loc_y: 12.9
+name: ""
+---
+loc_x: 27.1
+loc_y: 14.425
+name: ""
+---
+loc_x: 27.1
+loc_y: 15.95
+name: ""
+---
+loc_x: 26.1
+loc_y: 7.9
+name: ""
+---
+loc_x: 27.1
+loc_y: 4.087509
+name: ""
+---
+loc_x: 26.1
+loc_y: 5.95
+name: ""
+---
+loc_x: 27.1
+loc_y: 2.787509
+name: ""
+---
+loc_x: 26.1
+loc_y: 4.087509
+name: ""
+---
+loc_x: 27.1
+loc_y: 1.487509
+name: ""
+---
+loc_x: 26.1
+loc_y: 2.787509
+name: ""
+---
+loc_x: 26.1
+loc_y: 1.487509
+name: ""
+---
+loc_x: 24.05
+loc_y: 1.487509
+name: ChargingStation7
+---
+loc_x: 24.05
+loc_y: 2.787509
+name: ChargingStation6
+---
+loc_x: 24.05
+loc_y: 4.087509
+name: ChargingStation5
+---
+loc_x: 26.1
+loc_y: 8.75
+name: ""
+---
+loc_x: 24.4
+loc_y: 8.75
+name: ""
+---
+loc_x: 22.7
+loc_y: 8.75
+name: ""
+---
+loc_x: 21
+loc_y: 8.75
+name: ""
+---
+loc_x: 26.1
+loc_y: 11.375
+name: ""
+---
+loc_x: 26.1
+loc_y: 12.9
+name: ""
+---
+loc_x: 26.1
+loc_y: 14.425
+name: ""
+---
+loc_x: 26.1
+loc_y: 15.95
+name: ""
+---
+loc_x: 26.1
+loc_y: 17.25
+name: ""
+---
+loc_x: 24.45
+loc_y: 15.95
+name: Inbound1
+---
+loc_x: 26.1
+loc_y: 18.55
+name: ""
+---
+loc_x: 27.1
+loc_y: 17.25
+name: ""
+---
+loc_x: 24.45
+loc_y: 17.25
+name: Inbound2
+---
+loc_x: 26.1
+loc_y: 19.85
+name: ""
+---
+loc_x: 27.1
+loc_y: 18.55
+name: ""
+---
+loc_x: 24.45
+loc_y: 18.55
+name: Inbound3
+---
+loc_x: 27.1
+loc_y: 19.85
+name: ""
+---
+loc_x: 24.45
+loc_y: 19.85
+name: Inbound4
+---
+loc_x: 19.61666666666667
+loc_y: 8.75
+name: ""
+---
+loc_x: 18.23333333333333
+loc_y: 8.75
+name: ""
+---
+loc_x: 16.85
+loc_y: 8.75
+name: ""
+---
+loc_x: 16.85
+loc_y: 21.85
+name: ""
+---
+loc_x: 16.85
+loc_y: 20.55
+name: ""
+---
+loc_x: 15.48
+loc_y: 21.85
+name: ""
+---
+loc_x: 18.35
+loc_y: 21.85
+name: Inbound9
+---
+loc_x: 16.85
+loc_y: 19.25
+name: ""
+---
+loc_x: 15.48
+loc_y: 20.55
+name: ""
+---
+loc_x: 18.35
+loc_y: 20.55
+name: Inbound8
+---
+loc_x: 16.85
+loc_y: 17.95
+name: ""
+---
+loc_x: 15.48
+loc_y: 19.25
+name: ""
+---
+loc_x: 18.35
+loc_y: 19.25
+name: Inbound7
+---
+loc_x: 16.85
+loc_y: 16.65
+name: ""
+---
+loc_x: 15.48
+loc_y: 17.95
+name: ""
+---
+loc_x: 18.35
+loc_y: 17.95
+name: Inbound6
+---
+loc_x: 15.48
+loc_y: 16.65
+name: ""
+---
+loc_x: 16.85
+loc_y: 15.062509
+name: ""
+---
+loc_x: 18.35
+loc_y: 16.65
+name: Inbound5
+---
+loc_x: 14.11
+loc_y: 16.65
+name: ""
+---
+loc_x: 14.11
+loc_y: 17.95
+name: ""
+---
+loc_x: 14.11
+loc_y: 19.25
+name: ""
+---
+loc_x: 14.11
+loc_y: 20.55
+name: ""
+---
+loc_x: 14.11
+loc_y: 21.85
+name: ""
+---
+loc_x: 12.74
+loc_y: 21.85
+name: ""
+---
+loc_x: 12.74
+loc_y: 20.55
+name: ""
+---
+loc_x: 12.74
+loc_y: 19.25
+name: ""
+---
+loc_x: 12.74
+loc_y: 17.95
+name: ""
+---
+loc_x: 12.74
+loc_y: 16.65
+name: ""
+---
+loc_x: 11.37
+loc_y: 16.65
+name: ""
+---
+loc_x: 11.37
+loc_y: 17.95
+name: ""
+---
+loc_x: 11.37
+loc_y: 20.55
+name: ""
+---
+loc_x: 11.37
+loc_y: 21.85
+name: ""
+---
+loc_x: 10
+loc_y: 21.85
+name: ""
+---
+loc_x: 10
+loc_y: 20.55
+name: ""
+---
+loc_x: 11.37
+loc_y: 19.25
+name: ""
+---
+loc_x: 10
+loc_y: 17.95
+name: ""
+---
+loc_x: 10
+loc_y: 16.65
+name: ""
+---
+loc_x: 8.630000000000001
+loc_y: 16.65
+name: ""
+---
+loc_x: 8.630000000000001
+loc_y: 17.95
+name: ""
+---
+loc_x: 10
+loc_y: 19.25
+name: ""
+---
+loc_x: 8.630000000000001
+loc_y: 20.55
+name: ""
+---
+loc_x: 8.630000000000001
+loc_y: 21.85
+name: ""
+---
+loc_x: 7.26
+loc_y: 21.85
+name: ""
+---
+loc_x: 8.630000000000001
+loc_y: 19.25
+name: ""
+---
+loc_x: 7.26
+loc_y: 20.55
+name: ""
+---
+loc_x: 7.26
+loc_y: 19.25
+name: ""
+---
+loc_x: 7.26
+loc_y: 17.95
+name: ""
+---
+loc_x: 7.26
+loc_y: 16.65
+name: ""
+---
+loc_x: 5.89
+loc_y: 16.65
+name: ""
+---
+loc_x: 5.89
+loc_y: 17.95
+name: ""
+---
+loc_x: 5.89
+loc_y: 19.25
+name: ""
+---
+loc_x: 5.89
+loc_y: 20.55
+name: ""
+---
+loc_x: 5.89
+loc_y: 21.85
+name: ""
+---
+loc_x: 4.52
+loc_y: 21.85
+name: ""
+---
+loc_x: 4.52
+loc_y: 20.55
+name: ""
+---
+loc_x: 4.52
+loc_y: 19.25
+name: ""
+---
+loc_x: 4.52
+loc_y: 17.95
+name: ""
+---
+loc_x: 4.52
+loc_y: 16.65
+name: ""
+---
+loc_x: 3.15
+loc_y: 16.65
+name: ""
+---
+loc_x: 3.15
+loc_y: 17.95
+name: ""
+---
+loc_x: 3.15
+loc_y: 19.25
+name: ""
+---
+loc_x: 3.15
+loc_y: 20.55
+name: ""
+---
+loc_x: 3.15
+loc_y: 21.85
+name: ""
+---
+loc_x: 1.65
+loc_y: 20.55
+name: ChargingStation13
+---
+loc_x: 1.65
+loc_y: 19.25
+name: ChargingStation14
+---
+loc_x: 1.65
+loc_y: 17.95
+name: ChargingStation15
+---
+loc_x: 3.15
+loc_y: 15.35
+name: ""
+---
+loc_x: 1.65
+loc_y: 16.65
+name: ChargingStation16
+---
+loc_x: 1.65
+loc_y: 15.35
+name: ChargingStation17
+---
+loc_x: 3.15
+loc_y: 15.062509
+name: ""
+---
+loc_x: 16.85
+loc_y: 13.900009
+name: ""
+---
+loc_x: 16.85
+loc_y: 12.737509
+name: ""
+---
+loc_x: 15.32777777777778
+loc_y: 15.062509
+name: ""
+---
+loc_x: 13.80555555555556
+loc_y: 15.062509
+name: ""
+---
+loc_x: 12.28333333333333
+loc_y: 15.062509
+name: ""
+---
+loc_x: 10.76111111111111
+loc_y: 15.062509
+name: ""
+---
+loc_x: 9.238888888888891
+loc_y: 15.062509
+name: ""
+---
+loc_x: 7.716666666666667
+loc_y: 15.062509
+name: ""
+---
+loc_x: 6.194444444444445
+loc_y: 15.062509
+name: ""
+---
+loc_x: 4.672222222222222
+loc_y: 15.062509
+name: ""
+---
+loc_x: 16.85
+loc_y: 11.087509
+name: ""
+---
+loc_x: 16.85
+loc_y: 9.437509
+name: ""
+---
+loc_x: 15.2
+loc_y: 12.737509
+name: Rack48
+---
+loc_x: 3.15
+loc_y: 12.737509
+name: ""
+---
+loc_x: 3.15
+loc_y: 11.087509
+name: ""
+---
+loc_x: 3.15
+loc_y: 9.437509
+name: ""
+---
+loc_x: 4.8
+loc_y: 12.737509
+name: Rack32
+---
+loc_x: 3.15
+loc_y: 13.900009
+name: ""
+---
+loc_x: 15.2
+loc_y: 9.437509
+name: Rack65
+---
+loc_x: 16.85
+loc_y: 6.737509
+name: ""
+---
+loc_x: 18.35
+loc_y: 6.737509
+name: ChargingStation8
+---
+loc_x: 16.85
+loc_y: 6.137509
+name: ""
+---
+loc_x: 16.85
+loc_y: 5.437509
+name: ""
+---
+loc_x: 16.85
+loc_y: 4.137509
+name: ""
+---
+loc_x: 18.35
+loc_y: 5.437509
+name: ChargingStation9
+---
+loc_x: 16.85
+loc_y: 2.837509
+name: ""
+---
+loc_x: 18.35
+loc_y: 4.137509
+name: ChargingStation10
+---
+loc_x: 16.85
+loc_y: 1.537509
+name: ""
+---
+loc_x: 15.2
+loc_y: 2.837509
+name: Rack99
+---
+loc_x: 18.35
+loc_y: 2.837509
+name: ChargingStation11
+---
+loc_x: 18.35
+loc_y: 1.537509
+name: ChargingStation12
+---
+loc_x: 3.15
+loc_y: 1.537509
+name: ""
+---
+loc_x: 3.15
+loc_y: 2.837509
+name: ""
+---
+loc_x: 1.65
+loc_y: 1.537509
+name: ChargingStation22
+---
+loc_x: 3.15
+loc_y: 4.137509
+name: ""
+---
+loc_x: 4.8
+loc_y: 2.837509
+name: Rack83
+---
+loc_x: 1.65
+loc_y: 2.837509
+name: ChargingStation21
+---
+loc_x: 3.15
+loc_y: 5.437509
+name: ""
+---
+loc_x: 1.65
+loc_y: 4.137509
+name: ChargingStation20
+---
+loc_x: 1.65
+loc_y: 5.437509
+name: ChargingStation19
+---
+loc_x: 3.15
+loc_y: 6.137509
+name: ""
+---
+loc_x: 3.15
+loc_y: 6.737509
+name: ""
+---
+loc_x: 3.15
+loc_y: 8.087509000000001
+name: ""
+---
+loc_x: 1.65
+loc_y: 6.737509
+name: ChargingStation18
+---
+loc_x: 4.8
+loc_y: 9.437509
+name: Rack49
+---
+loc_x: 5.45
+loc_y: 12.737509
+name: Rack33
+---
+loc_x: 6.1
+loc_y: 12.737509
+name: Rack34
+---
+loc_x: 6.75
+loc_y: 12.737509
+name: Rack35
+---
+loc_x: 7.4
+loc_y: 12.737509
+name: Rack36
+---
+loc_x: 8.050000000000001
+loc_y: 12.737509
+name: Rack37
+---
+loc_x: 8.699999999999999
+loc_y: 12.737509
+name: Rack38
+---
+loc_x: 9.35
+loc_y: 12.737509
+name: Rack39
+---
+loc_x: 10
+loc_y: 12.737509
+name: Rack40
+---
+loc_x: 10.65
+loc_y: 12.737509
+name: Rack41
+---
+loc_x: 11.3
+loc_y: 12.737509
+name: Rack42
+---
+loc_x: 11.95
+loc_y: 12.737509
+name: Rack43
+---
+loc_x: 12.6
+loc_y: 12.737509
+name: Rack44
+---
+loc_x: 13.25
+loc_y: 12.737509
+name: Rack45
+---
+loc_x: 13.9
+loc_y: 12.737509
+name: Rack46
+---
+loc_x: 14.55
+loc_y: 12.737509
+name: Rack47
+---
+loc_x: 5.45
+loc_y: 9.437509
+name: Rack50
+---
+loc_x: 6.1
+loc_y: 9.437509
+name: Rack51
+---
+loc_x: 6.75
+loc_y: 9.437509
+name: Rack52
+---
+loc_x: 7.4
+loc_y: 9.437509
+name: Rack53
+---
+loc_x: 8.050000000000001
+loc_y: 9.437509
+name: Rack54
+---
+loc_x: 8.699999999999999
+loc_y: 9.437509
+name: Rack55
+---
+loc_x: 9.35
+loc_y: 9.437509
+name: Rack56
+---
+loc_x: 10
+loc_y: 9.437509
+name: Rack57
+---
+loc_x: 10.65
+loc_y: 9.437509
+name: Rack58
+---
+loc_x: 11.3
+loc_y: 9.437509
+name: Rack59
+---
+loc_x: 11.95
+loc_y: 9.437509
+name: Rack60
+---
+loc_x: 12.6
+loc_y: 9.437509
+name: Rack61
+---
+loc_x: 13.25
+loc_y: 9.437509
+name: Rack62
+---
+loc_x: 13.9
+loc_y: 9.437509
+name: Rack63
+---
+loc_x: 14.55
+loc_y: 9.437509
+name: Rack64
+---
+loc_x: 4.8
+loc_y: 6.137509
+name: Rack66
+---
+loc_x: 5.45
+loc_y: 6.137509
+name: Rack67
+---
+loc_x: 6.1
+loc_y: 6.137509
+name: Rack68
+---
+loc_x: 6.75
+loc_y: 6.137509
+name: Rack69
+---
+loc_x: 7.4
+loc_y: 6.137509
+name: Rack70
+---
+loc_x: 8.050000000000001
+loc_y: 6.137509
+name: Rack71
+---
+loc_x: 8.699999999999999
+loc_y: 6.137509
+name: Rack72
+---
+loc_x: 9.35
+loc_y: 6.137509
+name: Rack73
+---
+loc_x: 10
+loc_y: 6.137509
+name: Rack74
+---
+loc_x: 10.65
+loc_y: 6.137509
+name: Rack75
+---
+loc_x: 11.3
+loc_y: 6.137509
+name: Rack76
+---
+loc_x: 11.95
+loc_y: 6.137509
+name: Rack77
+---
+loc_x: 12.6
+loc_y: 6.137509
+name: Rack78
+---
+loc_x: 13.25
+loc_y: 6.137509
+name: Rack79
+---
+loc_x: 13.9
+loc_y: 6.137509
+name: Rack80
+---
+loc_x: 14.55
+loc_y: 6.137509
+name: Rack81
+---
+loc_x: 15.2
+loc_y: 6.137509
+name: Rack82
+---
+loc_x: 5.45
+loc_y: 2.837509
+name: Rack84
+---
+loc_x: 6.1
+loc_y: 2.837509
+name: Rack85
+---
+loc_x: 6.75
+loc_y: 2.837509
+name: Rack86
+---
+loc_x: 7.4
+loc_y: 2.837509
+name: Rack87
+---
+loc_x: 8.050000000000001
+loc_y: 2.837509
+name: Rack88
+---
+loc_x: 8.699999999999999
+loc_y: 2.837509
+name: Rack89
+---
+loc_x: 9.35
+loc_y: 2.837509
+name: Rack90
+---
+loc_x: 10
+loc_y: 2.837509
+name: Rack91
+---
+loc_x: 10.65
+loc_y: 2.837509
+name: Rack92
+---
+loc_x: 11.3
+loc_y: 2.837509
+name: Rack93
+---
+loc_x: 11.95
+loc_y: 2.837509
+name: Rack94
+---
+loc_x: 12.6
+loc_y: 2.837509
+name: Rack95
+---
+loc_x: 13.25
+loc_y: 2.837509
+name: Rack96
+---
+loc_x: 13.9
+loc_y: 2.837509
+name: Rack97
+---
+loc_x: 14.55
+loc_y: 2.837509
+name: Rack98
+---
+loc_x: 40.44
+loc_y: 8.550000000000001
+name: ChargingStation2
+---
+loc_x: 38.62
+loc_y: 8.550000000000001
+name: ""
+---
+loc_x: 35.5
+loc_y: 22.85
+name: ""
+---
+loc_x: 34.2
+loc_y: 22.85
+name: ""
+---
+loc_x: 31.6
+loc_y: 22.85
+name: ""
+---
+loc_x: 30.3
+loc_y: 22.85
+name: ""

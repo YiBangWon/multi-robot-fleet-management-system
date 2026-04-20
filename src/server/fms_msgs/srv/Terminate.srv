@@ -1,0 +1,6 @@
+# Terminate service call
+
+---
+
+# Confirmation that this service call is processed
+bool success

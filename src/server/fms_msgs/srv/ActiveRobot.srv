@@ -1,0 +1,10 @@
+# Active a robot and send its model information
+# Robot ID
+string robot_id
+# Robot Model Information
+fms_msgs/RobotModel robot_model
+
+---
+
+# Confirmation that this service call is processed
+bool success

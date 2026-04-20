@@ -1,0 +1,12 @@
+model_id: 3
+model_name: turtlebot3_waffle
+type: 0
+max_v: 1.0
+max_w: 0.5
+battery_life: 3600
+weight: 1.5729096
+max_weight: N/A
+size_w: 0.265
+size_h: 0.111
+size_d: 0.089
+task_time: 85.0

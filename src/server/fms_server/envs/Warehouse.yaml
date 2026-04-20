@@ -1,0 +1,8 @@
+room: Warehouse
+nr_of_robots: 4
+run_RHCR: false
+directed_graph: false
+remove_stations: false
+load_state_tables: false
+dist_bw_nodes: 1.5
+display_scale: 1.0

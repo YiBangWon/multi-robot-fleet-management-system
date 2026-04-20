@@ -1,0 +1,700 @@
+define hokuyolaser ranger
+(
+  sensor(
+    # laser-specific properties
+    # factory settings for LMS200
+    range [ 0.0  5.0 ]
+    fov 270.0
+    samples 270
+  )
+  model
+  (
+    # generic model properties
+    size [ 0.07 0.07 0.05 ] # dimensions from LMS200 data sheet
+    color "blue"
+    obstacle_return 0
+  )
+)
+
+
+define floorplan model
+(
+  # sombre, sensible, artistic
+  color "gray30"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+
+  obstacle_return 1
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+
+define background model
+(
+  # sombre, sensible, artistic
+  color "red"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+
+  obstacle_return 0
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+
+# set the resolution of the underlying raytrace model in meters
+resolution 0.02
+
+interval_sim 100  # simulation timestep in milliseconds
+
+
+window
+(
+  size [ 635.000 666.000 ] # in pixels
+  scale 36.995   # pixels per meter
+  center [ 0  0 ]
+  rotate [ 0  0 ]
+
+  show_data 1              # 1=on 0=off
+)
+
+# load an environment bitmap
+
+floorplan
+(
+  name "map"
+  size [150.0 84.0 0]
+  pose [ 75.0 42.0 0 0 ]
+)
+
+define pioneer_base position
+(
+  color "red"                   # Default color.
+  drive "diff"                  # Differential steering model.
+  gui_nose 0                    # Draw a nose on the robot so we can see which way it points
+  obstacle_return 0             # Can hit things.
+  ranger_return 0.5              # reflects sonar beams
+  blob_return 1                 # Seen by blobfinders
+  fiducial_return 1             # Seen as "1" fiducial finders
+
+  localization "gps"
+  localization_origin [0 0 0 0]   # Start odometry at (0, 0, 0).
+
+  # alternative odometric localization with simple error model
+  # localization "odom"              # Change to "gps" to have impossibly perfect, global odometry
+  # odom_error [ 0.05 0.05 0.1 ]    # Odometry error or slip in X, Y and Theta
+                                     # (Uniform random distribution)
+
+  # four DOF kinematics limits
+  # [ xmin xmax ymin ymax zmin zmax amin amax ]
+  velocity_bounds [-1 1 0 0 0 0 -45.0 45.0 ]
+  acceleration_bounds [-1.0 1.0 0 0 0 0 -45 45.0 ]
+)
+
+define pioneer2dx_base_no_sonar pioneer_base
+(
+  # actual size
+  size [0.44 0.38 0.22] # sizes from MobileRobots' web site
+
+  # the pioneer's center of rotation is offset from its center of area
+  origin [-0.04 0 0 0]
+
+  # draw a nose on the robot so we can see which way it points
+  gui_nose 0
+
+  # estimated mass in KG
+  mass 23.0
+)
+
+# as above, but with front sonar only
+define pioneer2dx_no_sonar pioneer2dx_base_no_sonar
+(
+  # simplified Body shape:
+  block(
+    points 8
+    point[0] [-0.2 0.12]
+    point[1] [-0.2 -0.12]
+    point[2] [-0.12 -0.2555]
+    point[3] [0.12 -0.2555]
+    point[4] [0.2 -0.12]
+    point[5] [0.2 0.12]
+    point[6] [0.12 0.2555]
+    point[7] [-0.12 0.2555]
+    z [0 0.22]
+  )
+)
+
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter1"
+  color "red"
+  pose [ 7.3251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter2"
+  color "red"
+  pose [ 9.8251 68.8922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter3"
+  color "red"
+  pose [ 12.1251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter4"
+  color "red"
+  pose [ 14.6251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter5"
+  color "red"
+  pose [ 17.0251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter6"
+  color "red"
+  pose [ 19.5251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter7"
+  color "red"
+  pose [ 21.9251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter8"
+  color "red"
+  pose [ 24.2251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter9"
+  color "red"
+  pose [ 26.8251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter10"
+  color "red"
+  pose [ 29.1251 68.8922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter11"
+  color "red"
+  pose [ 31.7251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter12"
+  color "red"
+  pose [ 34.0251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter13"
+  color "red"
+  pose [ 36.5251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter14"
+  color "red"
+  pose [ 38.9251 69.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter15"
+  color "red"
+  pose [ 41.3251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter16"
+  color "red"
+  pose [ 43.8251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter17"
+  color "red"
+  pose [ 46.2251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter18"
+  color "red"
+  pose [ 48.7251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter19"
+  color "red"
+  pose [ 51.2251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter20"
+  color "red"
+  pose [ 53.5251 69.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter21"
+  color "red"
+  pose [ 56.0251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter22"
+  color "red"
+  pose [ 58.4251 69.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter23"
+  color "red"
+  pose [ 60.9251 69.2922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter24"
+  color "red"
+  pose [ 63.3251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter25"
+  color "red"
+  pose [ 65.8251 69.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter26"
+  color "red"
+  pose [ 68.1251 69.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter27"
+  color "red"
+  pose [ 70.4251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter28"
+  color "red"
+  pose [ 72.9251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter29"
+  color "red"
+  pose [ 75.3251 69.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter30"
+  color "red"
+  pose [ 77.6251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter31"
+  color "red"
+  pose [ 80.2251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter32"
+  color "red"
+  pose [ 82.6251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter33"
+  color "red"
+  pose [ 85.1251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter34"
+  color "red"
+  pose [ 87.4251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter35"
+  color "red"
+  pose [ 89.9251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter36"
+  color "red"
+  pose [ 92.3251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter37"
+  color "red"
+  pose [ 94.8251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter38"
+  color "red"
+  pose [ 97.3251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter39"
+  color "red"
+  pose [ 99.7251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter40"
+  color "red"
+  pose [ 102.1251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter41"
+  color "red"
+  pose [ 104.5251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter42"
+  color "red"
+  pose [ 106.9251 68.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter43"
+  color "red"
+  pose [ 109.4251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter44"
+  color "red"
+  pose [ 111.8251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter45"
+  color "red"
+  pose [ 114.2251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter46"
+  color "red"
+  pose [ 116.7251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter47"
+  color "red"
+  pose [ 119.0251 69.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter48"
+  color "red"
+  pose [ 121.5251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter49"
+  color "red"
+  pose [ 124.0251 69.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter50"
+  color "red"
+  pose [ 126.3251 69.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter51"
+  color "red"
+  pose [ 7.3251 0.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter52"
+  color "red"
+  pose [ 9.9251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter53"
+  color "red"
+  pose [ 12.2251 0.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter54"
+  color "red"
+  pose [ 14.6251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter55"
+  color "red"
+  pose [ 17.0251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter56"
+  color "red"
+  pose [ 19.4251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter57"
+  color "red"
+  pose [ 22.0251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter58"
+  color "red"
+  pose [ 24.4251 0.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter59"
+  color "red"
+  pose [ 26.8251 1.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter60"
+  color "red"
+  pose [ 29.3251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter61"
+  color "red"
+  pose [ 31.7251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter62"
+  color "red"
+  pose [ 34.1251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter63"
+  color "red"
+  pose [ 36.4251 1.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter64"
+  color "red"
+  pose [ 39.1251 1.1922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter65"
+  color "red"
+  pose [ 41.5251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter66"
+  color "red"
+  pose [ 43.8251 0.9922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter67"
+  color "red"
+  pose [ 46.3251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter68"
+  color "red"
+  pose [ 48.7251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter69"
+  color "red"
+  pose [ 51.1251 1.0922 0 45 ]
+)
+
+pioneer2dx_no_sonar
+(
+  # can refer to the robot by this name
+  name "carter70"
+  color "red"
+  pose [ 53.5251 1.0922 0 45 ]
+)
+

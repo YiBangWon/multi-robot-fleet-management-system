@@ -1,0 +1,5 @@
+repositories:
+  aws-robomaker-small-warehouse-world:
+    type: git
+    url: https://github.com/aws-robotics/aws-robomaker-small-warehouse-world.git
+    version: ee0af733315e78432408c3cd98d378ecee5f767c

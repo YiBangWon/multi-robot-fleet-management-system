@@ -1,0 +1,9 @@
+<library path="fms_panel">
+    <class name="fms_panel/FmsPanel"
+           type="fms_panel::FmsPanel"
+           base_class_type="rviz_common::Panel">
+        <description>
+            fms_panel
+        </description>
+    </class>
+</library>

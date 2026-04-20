@@ -1,0 +1,13 @@
+# Disable Region | service call
+
+bool enable_all_nodes
+uint32 num_region
+float64[] min_x
+float64[] min_y
+float64[] max_x
+float64[] max_y
+
+---
+
+# Confirmation that this service call is processed
+bool success

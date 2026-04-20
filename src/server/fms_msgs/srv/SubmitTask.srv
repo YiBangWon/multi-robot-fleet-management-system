@@ -1,0 +1,11 @@
+# Submit Task | "add" service call
+
+fms_msgs/TaskInfo task_info
+
+---
+
+# Confirmation that this service call is processed
+bool success
+
+# generated task ID by dispatcher node
+string task_id

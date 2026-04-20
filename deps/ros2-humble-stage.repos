@@ -1,0 +1,9 @@
+repositories:
+  Stage:
+    type: git
+    url: https://github.com/tuw-robotics/Stage.git
+    version: f4a722c9508c9bd89eec22223ed44aeeab3e8265
+  stage_ros2:
+    type: git
+    url: https://github.com/tuw-robotics/stage_ros2.git
+    version: 1f621d3b7639451fd27c9c571ef121d58c7e4185

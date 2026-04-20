@@ -1,0 +1,20 @@
+# Command Robot Service Call
+string robot_id
+
+# robot action
+uint8 action
+uint8 ACTION_IDLE=1
+uint8 ACTION_MOVING=2
+uint8 ACTION_CHARGING=3
+uint8 ACTION_WAITING=4
+uint8 ACTION_PAUSE=5
+uint8 ACTION_RESUME=6
+
+# goal node 
+string goal_node
+
+---
+
+# Confirmation that this service call is processed
+bool success
+

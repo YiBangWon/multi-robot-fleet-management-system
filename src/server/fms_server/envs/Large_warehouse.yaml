@@ -1,0 +1,8 @@
+room: Large_warehouse
+nr_of_robots: 100
+run_RHCR: true
+directed_graph: false
+remove_stations: false
+load_state_tables: false
+dist_bw_nodes: 5.0
+display_scale: 2.0
